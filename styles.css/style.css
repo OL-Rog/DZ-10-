@@ -30,10 +30,14 @@ body {
 .dark-blue-bg {
     background-color:  var( --dark-blue-color);
 }
+.main-light-grey-bg {
+    background-color:  var( --main-light-grey-color);
+}
 
 .container {
     max-width: 1110px;
     margin-inline: auto;
+    padding-inline: 15px;
 }
 
 .navbar__list {
@@ -132,11 +136,6 @@ body {
     padding-block: var(--standart-padding);
 }
 
-.about-work__video {
-    width: 100%;
-    height: 100%;
-}
-
 .footer {
     padding-block: 50px;
 }
@@ -164,10 +163,19 @@ body {
     background-color: hsl(213 40% 44% / 1);
 }
 
-.wrapper-video {
-    margin-top: 57px;
+.about-work__video {
+    position: relative;
     width: 100%;
-    height: 600px;
+    padding-bottom: 50%;
+    margin-top: 50px;
+}
+
+.about-work__video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @media (max-width: 1088px) {
@@ -188,14 +196,6 @@ body {
         color: black;
         gap: 50px 20%;
     }
-    .wrapper-video {
-        padding-bottom: 10%;
-    }
-}
-@media (max-width: 700px) {
-    .wrapper-video {
-        padding-bottom: 20%;
-    }
 }
 
 @media (max-width: 600px) {
@@ -203,10 +203,10 @@ body {
         justify-content: space-evenly;
     }
     .header  {
-        padding-block: 5%;
+        padding-block: 30px;
     }
     .about-me {
-        padding-block: 15%;
+        padding-block: 30px;
     }
     .about-work {
         padding-bottom: 0;
@@ -215,23 +215,17 @@ body {
         margin-block: 15% 10%;
     }
     .projects {
-        padding-block: 5%;
+        padding-block: 30px;
     } 
     .footer {
-        padding-block: 5%;
-        gap: 5%;
-    
+        padding-block: 30px;
     }
     .about-work {
-        padding-block: 15%;
+        padding-block: 30px;
     }
     .header__button {
         width: 100%;
         line-height:var(--line-height-sm) ;
-    }
-    .wrapper-video {
-        padding-bottom: 10%;
-        height: 400px;
     }
 }
 
@@ -241,8 +235,5 @@ body {
     }
     .subtitle {
      font-size: 13px;   
-    }
-    .wrapper-video {
-        height: 250px;
     }
 }
